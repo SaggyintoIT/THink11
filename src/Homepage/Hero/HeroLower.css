@@ -1,0 +1,23 @@
+/* HeroLower.css */
+.oval-input {
+    border-radius: 25px; /* Make the input oval */
+    padding: 10px 15px;  /* Adjust padding for better appearance */
+    border: 1px solid #ccc; /* Optional: Set border color */
+}
+
+.intl-tel-input {
+    border-radius: 25px; /* Same border-radius as input for consistent look */
+    
+}
+
+.intl-tel-input input {
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Match oval shape */
+    padding: 10px 15px; /* Adjust padding */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.btn-darkblack{
+    font-size: 14px !important;
+    padding: 18px !important;
+}
