@@ -3,6 +3,7 @@ import fp from '../../assets/images/fp-logo.png'
 import fifa from '../../assets/images/fifa.png'
 import call from '../../assets/images/call.svg'
 import map from '../../assets/images/map_pin.svg'
+import { Link } from 'react-router-dom'
 import email from '../../assets/images/email_2.svg'
 const Footer = () => {
   return (
@@ -85,7 +86,7 @@ const Footer = () => {
           <div className="bor_right pl-70 paddingtop55">
             <h4 className="fn-18 text-lgray3 pb-4">Help &amp; Support</h4>
             <ul className="f_link pb-0">
-              <li><a href="faq">Faqs</a></li>
+              <li><Link to="faq">Faqs</Link></li>
               <li><a href="chat-support">Chat Support</a></li>
               <li><a href="point-system">Fantasy Point System</a></li>
               <li><a href="terms.html">Term &amp; Conditions</a></li>
