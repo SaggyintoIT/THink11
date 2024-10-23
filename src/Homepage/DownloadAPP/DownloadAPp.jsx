@@ -1,5 +1,7 @@
 import React from 'react';
 import mobileIcon from '../../assets/images/18+.svg'; // Assuming the image path is correct
+import IntlTelInput from 'react-intl-tel-input'; // Import the IntlTelInput component
+import 'react-intl-tel-input/dist/main.css'; // Import the CSS for the IntlTelInput component
 
 const DownloadAppSection = () => {
   return (
@@ -15,13 +17,21 @@ const DownloadAppSection = () => {
                   <div className="country-code d-flex">
                     <div className="country-number w-286">
                       <div className="form-group line">
-                        <input
-                          type="text"
-                          id="mobile_code"
-                          className="form-control font-16"
-                          placeholder="Enter Mobile Number"
-                          name="name"
-                        />
+                      <IntlTelInput
+                   placeholder='Enter your number'
+                preferredCountries={['in']} // Set primary flag as India
+                containerClassName="intl-tel-input"
+                inputClassName="form-control font-16 oval-input form-control2"
+                buttonClassName="btn"
+                defaultCountry="in"
+                
+                onPhoneNumberChange={(isValid, value, countryData) => {
+                    console.log('Valid:', isValid, 'Value:', value, 'Country Data:', countryData);
+                }}
+                inputProps={{
+                    placeholder: "Enter your phone number", // Placeholder for the input field
+                }}
+            />
                       </div>
                     </div>
                   </div>

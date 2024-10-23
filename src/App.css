@@ -334,6 +334,10 @@ button.com-btn.lefta.slick-arrow{right: 120px;}
 {
     opacity: 1;
 }
+
+
+
+
 .slick-dots li button:before
 {
     font-family: 'slick';
@@ -379,6 +383,89 @@ button.com-btn.lefta.slick-arrow{right: 120px;}
      touch-action: pan-y;
      -webkit-tap-highlight-color: transparent;
  }
+ 
+ .testimonial-slide {
+    display: flex;
+    justify-content: center;   /* Center the testimonials */
+            /* Padding for aesthetics */
+     /* Prevent overflow */
+        
+     align-items: center;
+  }
+  
+  
+  .testimonial_box {
+    max-width: 420px;     
+      /* Max width for each testimonial */
+    width: 100%;              /* Allow full width on mobile */
+    margin: 0 10px;           /* Space between testimonial boxes */
+    
+    border-radius: 8px;       /* Rounded corners */
+             /* Add padding inside the box */
+   
+  }
+  @media (max-width:1001px){
+    .slick-slide img {
+        display: block;
+        width: 6rem !important;
+    }
+    .slick-slide .media-img{
+        width: 100vw !important;
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .testimonial-slide {
+      flex-direction: column;  /* Stack testimonials vertically on small screens */
+      align-items: center;      /* Center them horizontally */
+    }
+    
+    .testimonial_box {
+      max-width: 100%;          /* Allow the testimonial box to take more width */
+      margin: 10px 0;          /* Vertical margin for spacing */
+    }
+  
+    .testimonial_box-img img {
+      width: 50px;             /* Smaller images on mobile */
+      height: 50px;            /* Maintain aspect ratio */
+      border-radius: 50%;      /* Make images circular */
+    }
+  }
+  
+  @media (max-width: 643px) {
+    .testimonial_box {
+            /* Adjust margins to fit more testimonials */
+    }
+  }
+  
+
+
+
+.slick-track {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.slick-list {
+    overflow: hidden !important;
+}
+
+
+.custom-button {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+  
+ 
+
+  
+
+  
  
  .slick-list {
      position: relative;
@@ -475,5 +562,27 @@ button.com-btn.lefta.slick-arrow{right: 120px;}
     font-style: normal;
   }
   
+  .form-control2{
+    margin-left: 20px;
+  }
 
 
+
+  .searchbox-wrap button span {
+    margin-left: 50px;
+    padding: 16px 20px !important;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    background-color: #17C47D;
+    border-radius: 36px;
+    font-size: 17px;
+    font-weight: 400;
+    overflow: hidden;
+    position: relative;
+}
+
+.intl-tel-input.allow-dropdown .selected-flag {
+    width: 46px;
+    background-color: transparent !important;
+}

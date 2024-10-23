@@ -1,61 +1,46 @@
 import React from "react";
-import Slider from "react-slick";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import aman from '../../assets/images/Dhirendra.svg';
 import left from '../../assets/images/left.svg';
 import right from '../../assets/images/slickrightarrow.svg';
-import '../../assets/css/slick-theme.css'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
     text: "Think11 is a great platform that focuses on offering the best facilities to their customers. The customer support staff is very cooperative. I am happy that there are such platforms in India.",
     name: "Aman Singh",
     location: "Jaipur, Rajasthan",
-    imgSrc: aman, // Use the imported image directly
+    imgSrc: aman,
+  },
+  {
+    text: "Excellent platform with superb features! Their support team is fantastic.",
+    name: "Raj Kumar",
+    location: "Delhi, India",
+    imgSrc: aman,
+  },
+  {
+    text: "I love using Think11! The user experience is top-notch, and I always feel supported.",
+    name: "Sita Devi",
+    location: "Mumbai, India",
+    imgSrc: aman,
   },
   // Add more testimonials as needed
 ];
 
 const TestimonialSection = () => {
-  const settings = {
-    slidesToShow: 2.5,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    infinite: true,
-    speed: 300,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2.5,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section className="bodypx Testimonial bg-white py-80 pb-1">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12 text-center" data-aos="fade-up" data-aos-delay="200">
-            <h2 className="">What our customers say</h2>
-            <p>Customer satisfaction is very important to us..</p>
+            <h2>What our customers say</h2>
+            <p>Customer satisfaction is very important to us.</p>
           </div>
 
           <div className="pt-3 pb-5 px-md-3 px-0 d-flex">
             <div className="testimonial">
-              <Slider {...settings} className="testimonial-slider">
-                {testimonials.map((testimonial, index) => (
+              <AliceCarousel
+                items={testimonials.map((testimonial, index) => (
                   <div className="testimonial-slide" key={index}>
                     <div className="testimonial_box">
                       <div className="testimonial_box-inner">
@@ -97,16 +82,30 @@ const TestimonialSection = () => {
                     </div>
                   </div>
                 ))}
-              </Slider>
-
-              <div className="btn-wrap">
-                <button className="prev-btn com-btn mr-3" onClick={() => this.slider.slickPrev()}>
-                  <span><img src={left} alt="Previous" /></span>
-                </button>
-                <button className="next-btn com-btn" onClick={() => this.slider.slickNext()}>
-                  <span><img src={right} alt="Next" /></span>
-                </button>
-              </div>
+                responsive={{
+                  0: { items: 1 },   // Show 1 item on small screens
+                  768: { items: 2 }, // Show 2 items on tablets
+                  1024: { items: 3 }, // Show 3 items on laptops/desktops
+                }}
+                autoPlay
+                autoPlayInterval={4000}
+                infinite // Enable infinite scrolling
+                disableButtonsControls // Disable default button controls
+                renderPrevButton={({ isEnabled }) => (
+                  <button
+                    className="custom-button"
+                    disabled={!isEnabled}
+                    style={{ backgroundImage: `url(${left})`, border: 'none' }} // Adjust button styling as needed
+                  />
+                )}
+                renderNextButton={({ isDisabled }) => (
+                  <button
+                    className="custom-button"
+                    disabled={isDisabled}
+                    style={{ backgroundImage: `url(${right})`, border: 'none' }} // Adjust button styling as needed
+                  />
+                )}
+              />
             </div>
           </div>
         </div>

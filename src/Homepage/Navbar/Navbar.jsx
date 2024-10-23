@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import logo from '../../assets/images/logo.svg'; // Adjust the path according to your structure
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll'; // Import with alias
+import { Link as RouterLink } from 'react-router-dom'; // Import with alias
 
 const Navbar = () => {
     useEffect(() => {
@@ -67,46 +68,47 @@ const Navbar = () => {
                 <div className="menu_container">
                     <ul className={`menu_list ${menuActive ? 'active' : ''}`} id="menulist">
                         <li data-aos="fade-up" data-aos-delay="100">
-                            <Link to="hero" smooth={true} duration={0}>Home</Link>
+                            <ScrollLink to="hero" smooth={true} duration={0}>Home</ScrollLink>
                         </li>
-                        <li data-aos="fade-up" data-aos-delay="300">
-                            <Link to="features" smooth={true} duration={0}>Features</Link>
-                        </li>
+                       
                         <li className="drop" data-aos="fade-up" data-aos-delay="300">
-                            <Link to="popular" smooth={true} duration={0}>
+                            <ScrollLink to="popular" smooth={true} duration={0}>
                                 Fantasy Sports
                                 <svg className="">
                                     <use xlinkHref="#down_arrow" />
                                 </svg>
-                            </Link>
+                            </ScrollLink>
                             <span className="sub_menu" data-index="0"></span>
                             <div className="menu_dropdown px-3">
                                 <ul className="sub-menu">
-                                <li><a href="/fantasy-cricket">Fantasy Cricket</a></li>
-                                    <li><a href="/fantasy-football">Fantasy Football</a></li>
-                                    <li><a href="/fantasy-kabbadi">Fantasy Kabbadi</a></li>
+                                    <li><RouterLink to="/fantasy-cricket">Fantasy Cricket</RouterLink></li>
+                                    <li><RouterLink to="/fantasy-football">Fantasy Football</RouterLink></li>
+                                    <li><RouterLink to="/fantasy-kabbadi">Fantasy Kabbadi</RouterLink></li>
                                 </ul>
                             </div>
                         </li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <ScrollLink to="features" smooth={true} duration={0}>Features</ScrollLink>
+                        </li>
                         <li data-aos="fade-up" data-aos-delay="400">
-                            <Link to="how-it-works" smooth={true} duration={0}>How It Works</Link>
+                            <ScrollLink to="how-it-works" smooth={true} duration={0}>How It Works</ScrollLink>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="450">
                             <a href="https://blog.think11.in/" title="Blog">Blog</a>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="500">
-                        <a href="/contact">Contact</a>
-                        </li>  
+                            <RouterLink to="/contact">Contact</RouterLink>
+                        </li>
                         <li data-aos="fade-up" data-aos-delay="550">
-                            <a href="/contact" className="btn-darkblack px-4 text-white py-3 d-flex">
+                            <RouterLink to="/contact" className="btn-darkblack px-4 text-white py-3 d-flex">
                                 <span>REGISTER/LOGIN</span>
-                            </a>
+                            </RouterLink>
                         </li>
                     </ul>
                     <div className="d-flex d-md-none">
-                        <Link to="/contact" className="btn-darkblack px-2 fs-14 text-white py-1 me-3">
+                        <a href='https://think11.app/signup/?referral=AE6D6A' className="btn-darkblack px-2 fs-14 text-white py-1 me-3">
                             <span>REGISTER/LOGIN</span>
-                        </Link>
+                        </a>
                     </div>
                     <div id="navtoggle" className={`open ${menuActive ? 'active' : ''}`} title="Open menu" onClick={handleMenuToggle}>
                         <span></span>

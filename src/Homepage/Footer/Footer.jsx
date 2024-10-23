@@ -5,6 +5,7 @@ import call from '../../assets/images/call.svg';
 import map from '../../assets/images/map_pin.svg';
 import { Link } from 'react-router-dom'; // Ensure you're importing Link
 import email from '../../assets/images/email_2.svg';
+import fp_logo from '../../assets/images/fp-logo.png'
 
 const Footer = () => {
   return (
@@ -101,20 +102,45 @@ const Footer = () => {
                   <div className="mt-3">
                     <img width="90" src={fifa} alt="" />
                   </div>
+                  <h4 className="fn-18 text-lgray3 mt-4">Fairplay Policy</h4>
+              <div className="mt-3">
+                <ul className="f_link pb-0">
+                <img width="90" src={fp_logo}/>
+              </ul>
+              </div> 
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="container-fluid p-0">
-          <div className="row copyrightbar text-center">
-            <div className="col-md-12 col-12 p-0 my-2">
-              <p className="fn-14 text-white">© 2024 Think11. All Rights Reserved.</p>
-            </div>
+            <div className="py-5 text-center bor_top">         
+              <div className="">           
+                <div className="">       
+                  <p className="font-18 text-white mb-0 aos-init" data-aos="fade-up" data-aos-delay="400">
+                    Disclaimer: The user would be solely responsible for any sort of loss occurred while playing. This game may be habit-forming or financially risky. You should be 18 years older or above to play fantasy sports on Think11. Accordance with the prevalent laws, residents of Assam, Odisha, Nagaland, Sikkim, Tamil Nadu, Andhra Pradesh, Arunachal Pradesh and Telangana or any other state that imposes any sort of restrictions in future cannot use this digital platform.
+                  </p>                                
+                  </div>                
+              </div>
+    
+            </div> 
           </div>
         </div>
       </footer>
+      <div className="bodypx copyRright">
+    <div className="container-fluid"> 
+  <div className="row">
+    <div className="py-md-4 py-3">
+      <div className="row">
+      <div className="col-md-6 order-md-1 order-2">
+        <p className="mb-0 font-primary fn-16 text-md-start">© Copyright 2024 Think11. All Rights Reserved.</p>
+      </div>
+       <div className="col-md-6 order-md-2 order-1 d-md-flex d-none">
+        <p className="mb-0 font-primary fn-16 text-md-end ms-auto">Design & developed by <a class="custom-link font-primary" href="https://indtechmark.com">IND Tech Mark</a></p>
+       </div>
+      </div>
+    
+    </div>
+    </div>
+  </div>
+  </div>
     </>
   );
 };

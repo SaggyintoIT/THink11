@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import casewin from '../assets/images/casewinnings.svg';
+import HeroLower from '../Homepage/Hero/HeroLower';
 
 const CricketHero = () => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const CricketHero = () => {
   }, []);
 
   return (
+    <>
     <section className="bodypx homebanner text-white">
       <div className="container-fluid pt-77">
         <div className="row align-items-center mt-md-5 mt-4">
@@ -43,6 +45,8 @@ const CricketHero = () => {
         </div>
       </div>
     </section>
+    <HeroLower/>
+    </>
   );
 }
 

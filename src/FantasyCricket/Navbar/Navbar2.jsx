@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import logo from '../../assets/images/logo.svg';
-
+import { Link as RouterLink } from 'react-router-dom'; // Import with alias
 const Navbar2 = () => {
   useEffect(() => {
     AOS.init({ duration: 500 }); // Initialize AOS
@@ -19,7 +19,7 @@ const Navbar2 = () => {
         <div className="menu_container">
           <ul className="menu_list" id="menulist">
             <li data-aos="fade-up" data-aos-delay="100">
-              <a href="index.html" title="Home">Home</a>
+            <RouterLink to="/">Home</RouterLink>
             </li>
             <li className="drop" data-aos="fade-up" data-aos-delay="300">
               <a href="#fantasy" title="Fantasy Sports">
@@ -31,9 +31,9 @@ const Navbar2 = () => {
               <span className="sub_menu" data-index="0"></span>
               <div className="menu_dropdown px-3">
                 <ul className="sub-menu">
-                  <li data-aos="fade-up" data-aos-delay="400"><a href="fantasy-cricket.html">Fantasy Cricket</a></li>
-                  <li data-aos="fade-up" data-aos-delay="450"><a href="fantasy-football.html">Fantasy Football</a></li>
-                  <li data-aos="fade-up" data-aos-delay="500"><a href="fantasy-kabaddi.html">Fantasy Kabaddi</a></li>
+                <li><RouterLink to="/fantasy-cricket">Fantasy Cricket</RouterLink></li>
+                                    <li><RouterLink to="/fantasy-football">Fantasy Football</RouterLink></li>
+                                    <li><RouterLink to="/fantasy-kabbadi">Fantasy Kabbadi</RouterLink></li>
                 </ul>
               </div>
             </li>
@@ -41,12 +41,12 @@ const Navbar2 = () => {
               <a href="https://blog.think11.in/" title="Blog">Blog</a>
             </li>
             <li data-aos="fade-up" data-aos-delay="500">
-              <a href="contact-us.html" title="Contact">Contact Us</a>
+            <RouterLink to="/contact">Contact</RouterLink>
             </li>
             <li data-aos="fade-up" data-aos-delay="550">
-              <a href="contact-us.html" className="btn-darkblack px-4 text-white py-3 d-flex">
-                <span>REGISTER/LOGIN</span>
-              </a>
+            <a href='https://think11.app/signup/?referral=AE6D6A' className="btn-darkblack px-2 fs-14 text-white py-1 me-3">
+                            <span>REGISTER/LOGIN</span>
+                        </a>
             </li>
           </ul>
           <div className="d-flex d-md-none">

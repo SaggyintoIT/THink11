@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'primeicons/primeicons.css';
 import './App.css';
@@ -30,19 +31,30 @@ import Terms from './Small_SUB_Pages/Terms';
 import HowToPlay from './Small_SUB_Pages/HowToPlay';
 import Withdrawal from './Small_SUB_Pages/Withdrawal';
 
+// ScrollToTop component defined inline
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
-      
+      <ScrollToTop /> {/* Scroll to top on route change */}
+      <Navbar />
       <Routes>
-      
         <Route path="/" element={<HomePagemain />} />
-        
+
         {/* Fantasy Sports Pages */}
-        <Route path="/fantasy-cricket" element={<FantasyCricket/>} />
+        <Route path="/fantasy-cricket" element={<FantasyCricket />} />
         <Route path="/fantasy-football" element={<FantasyFootball />} />
         <Route path="/fantasy-kabbadi" element={<FantasyKabbadi />} />
-        
+
         {/* Other Pages */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
