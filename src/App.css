@@ -412,6 +412,9 @@ button.com-btn.lefta.slick-arrow{right: 120px;}
     .slick-slide .media-img{
         width: 100vw !important;
     }
+    .features2{
+        margin-left: 0px !important;
+      }
   }
   
   /* Media Queries */
@@ -420,6 +423,9 @@ button.com-btn.lefta.slick-arrow{right: 120px;}
       flex-direction: column;  /* Stack testimonials vertically on small screens */
       align-items: center;      /* Center them horizontally */
     }
+    .features2{
+        margin-left: 0px !important;
+      }
     
     .testimonial_box {
       max-width: 100%;          /* Allow the testimonial box to take more width */
@@ -586,3 +592,24 @@ button.com-btn.lefta.slick-arrow{right: 120px;}
     width: 46px;
     background-color: transparent !important;
 }
+
+.arrow-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the flip */
+position: absolute;
+margin-left: 5px;
+
+    
+  }
+  
+  .arrow-icon:hover {
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees on hover */
+  }
+
+  .Cursor{
+    cursor: pointer;
+  }
+
+  .features2{
+    margin-left: 1.4rem;
+  }

@@ -4,6 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import { Link as ScrollLink } from 'react-scroll'; // Import with alias
 import { Link as RouterLink } from 'react-router-dom'; // Import with alias
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Navbar = () => {
     useEffect(() => {
@@ -68,16 +70,15 @@ const Navbar = () => {
                 <div className="menu_container">
                     <ul className={`menu_list ${menuActive ? 'active' : ''}`} id="menulist">
                         <li data-aos="fade-up" data-aos-delay="100">
-                            <ScrollLink to="hero" smooth={true} duration={0}>Home</ScrollLink>
+                            <ScrollLink to="hero" className='Cursor'  smooth={true} duration={0}>Home</ScrollLink>
                         </li>
                        
                         <li className="drop" data-aos="fade-up" data-aos-delay="300">
-                            <ScrollLink to="popular" smooth={true} duration={0}>
+                            <ScrollLink to="popular" className='Cursor' smooth={true} duration={0}>
                                 Fantasy Sports
-                                <svg className="">
-                                    <use xlinkHref="#down_arrow" />
-                                </svg>
+                                <span className="material-symbols-outlined arrow-icon">keyboard_arrow_down</span>
                             </ScrollLink>
+                           
                             <span className="sub_menu" data-index="0"></span>
                             <div className="menu_dropdown px-3">
                                 <ul className="sub-menu">
@@ -88,10 +89,10 @@ const Navbar = () => {
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="300">
-                            <ScrollLink to="features" smooth={true} duration={0}>Features</ScrollLink>
+                            <ScrollLink to="features" className='Cursor features2' smooth={true} duration={0}>Features</ScrollLink>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="400">
-                            <ScrollLink to="how-it-works" smooth={true} duration={0}>How It Works</ScrollLink>
+                            <ScrollLink to="how-it-works" className='Cursor' smooth={true} duration={0}>How It Works</ScrollLink>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="450">
                             <a href="https://blog.think11.in/" title="Blog">Blog</a>
