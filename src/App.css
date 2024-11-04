@@ -9,8 +9,39 @@
     font-weight: normal;
     font-style: normal;
   }
-  
-  
+  .LinkFoot{
+    text-decoration: none;
+  }
+  .blog_nav2{
+    margin-left: 17px;
+  }
+
+  .accordion-button {
+    font-size: 24px !important;
+    color: #ffffff !important;
+    padding: 2.2rem 0rem !important;
+    font-weight: 400 !important;
+}
+.accordion-button {
+    background: transparent !important;
+}
+
+.f_link li a {
+    color: var(--themecolor3);
+    font-family: var(--font-face1);
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s ease-in;
+    position: relative;
+    text-decoration: none !important;
+}
+.Insights-text a {
+text-decoration: none !important;
+}
+.bor_right a {
+    text-decoration: none !important;
+}
+
   @font-face {
     font-family: 'OpenSans-Light';
     src: url('./assets/fonts/OpenSans-Light.woff') format('woff'),

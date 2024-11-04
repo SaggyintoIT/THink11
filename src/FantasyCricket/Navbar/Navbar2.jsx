@@ -13,7 +13,7 @@ const Navbar2 = () => {
       <div className="w-100 header_container d-flex align-items-center">
         <div className="logo_container" data-aos="fade-down">
           <a href="index.html" className="d-block">
-            <img src={logo} className="w-100 default_logo" alt="Logo" />
+          <RouterLink to="/">  <img src={logo} className="w-100 default_logo" alt="Logo" /></RouterLink> 
           </a>
         </div>
         <div className="menu_container">
@@ -21,12 +21,11 @@ const Navbar2 = () => {
             <li data-aos="fade-up" data-aos-delay="100">
             <RouterLink to="/">Home</RouterLink>
             </li>
-            <li className="drop" data-aos="fade-up" data-aos-delay="300">
+            <li className="drop DropN2" data-aos="fade-up" data-aos-delay="300">
               <a href="#fantasy" title="Fantasy Sports">
                 Fantasy Sports
-                <svg className="">
-                  <use xlinkHref="#down_arrow" />
-                </svg>
+                <span className="material-symbols-outlined arrow-icon Arrow_n2">keyboard_arrow_down</span>
+                
               </a>
               <span className="sub_menu" data-index="0"></span>
               <div className="menu_dropdown px-3">
@@ -37,8 +36,8 @@ const Navbar2 = () => {
                 </ul>
               </div>
             </li>
-            <li data-aos="fade-up" data-aos-delay="450">
-              <a href="https://blog.think11.in/" title="Blog">Blog</a>
+            <li data-aos="fade-up blog_nav2" data-aos-delay="450">
+              <a href="https://blog.think11.in/" className='blog_nav2' title="Blog">Blog</a>
             </li>
             <li data-aos="fade-up" data-aos-delay="500">
             <RouterLink to="/contact">Contact</RouterLink>

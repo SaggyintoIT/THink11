@@ -133,7 +133,7 @@ const Footer = () => {
         <p className="mb-0 font-primary fn-16 text-md-start">© Copyright 2024 Think11. All Rights Reserved.</p>
       </div>
        <div className="col-md-6 order-md-2 order-1 d-md-flex d-none">
-        <p className="mb-0 font-primary fn-16 text-md-end ms-auto">Design & developed by <a class="custom-link font-primary" href="https://indtechmark.com">IND Tech Mark</a></p>
+        <p className="mb-0 font-primary fn-16 text-md-end ms-auto">Design & developed by <a className="custom-link LinkFoot font-primary" href="https://indtechmark.com">IND Tech Mark</a></p>
        </div>
       </div>
     

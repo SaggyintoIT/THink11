@@ -20,10 +20,10 @@ const Hero = () => {
           <p className="fn-18 fw-600 pt-3" data-aos="fade-up" data-aos-delay="300">Fantasy Football, Cricket and Kabaddi App.</p>
 
           <div className="d-md-flex d-none align-items-center">
-            <a href="#" className="d-flex btn-btnwhite mt-2 mt-xl-3 fw-600" data-aos="fade-up" data-aos-delay="450">
+            <a href="https://play.google.com/store/apps/details?id=com.think11.app&pli=1" className="d-flex btn-btnwhite mt-2 mt-xl-3 fw-600" data-aos="fade-up" data-aos-delay="450">
               <img className="m-auto" src={gplay} alt="Google Play" />
             </a>
-            <a href="#" className="d-flex playbtn btn-btnwhite mt-2 mt-xl-3 fw-600 ms-sm-4 ms-2" data-aos="fade-up" data-aos-delay="550">
+            <a href="https://apps.apple.com/in/app/think11-fantasy-sports/id6448722703" className="d-flex playbtn btn-btnwhite mt-2 mt-xl-3 fw-600 ms-sm-4 ms-2" data-aos="fade-up" data-aos-delay="550">
               <img className="m-auto" src={aplay} alt="App Play" />
             </a>
           </div>

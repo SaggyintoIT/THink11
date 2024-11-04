@@ -64,7 +64,7 @@ const Navbar = () => {
             <div className="w-100 header_container d-flex align-items-center">
                 <div className="logo_container">
                     <a href="index.html" className="d-block">
-                        <img src={logo} className="w-100 default_logo" alt="Logo" />
+                    <ScrollLink to="hero" className='Cursor'  smooth={true} duration={0}>       <img src={logo} className="w-100 default_logo" alt="Logo" /></ScrollLink>
                     </a>
                 </div>
                 <div className="menu_container">
