@@ -644,3 +644,29 @@ margin-left: 5px;
   .features2{
     margin-left: 1.4rem;
   }
+
+  .textcolortext .accordion-button{
+    color:  black !important;
+    font-family: sans-serif;
+  }
+
+  .FaqMain2 {
+    border-top-left-radius: var(--bs-accordion-inner-border-radius);
+
+            border-top-right-radius: var(--bs-accordion-inner-border-radius);
+        padding: 3rem !important;
+}
+
+.FaqMain2 {
+    
+    padding: 2rem;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    /* border-color: var(--bs-accordion-btn-focus-border-color); */
+
+    border-color: none !important;
+    outline: 0;
+    box-shadow: none !important;
+}

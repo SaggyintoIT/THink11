@@ -41,7 +41,7 @@ const FaqMain = () => {
                 <div className="accordion-item" data-aos="fade-up" data-aos-delay="200">
                   <h2 className="accordion-header">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button collapsed FaqMain2"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
@@ -71,7 +71,7 @@ const FaqMain = () => {
                 <div className="accordion-item" data-aos="fade-up" data-aos-delay="300">
                   <h2 className="accordion-header">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button collapsed FaqMain2"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseTwo"
@@ -103,7 +103,7 @@ const FaqMain = () => {
                 <div className="accordion-item" data-aos="fade-up" data-aos-delay="400">
                   <h2 className="accordion-header">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button collapsed FaqMain2"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseThree"
@@ -135,7 +135,7 @@ const FaqMain = () => {
                 <div className="accordion-item" data-aos="fade-up" data-aos-delay="500">
                   <h2 className="accordion-header">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button collapsed FaqMain2"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapsefour"
@@ -167,7 +167,7 @@ const FaqMain = () => {
                 <div className="accordion-item" data-aos="fade-up" data-aos-delay="600">
                   <h2 className="accordion-header">
                     <button
-                      className="accordion-button collapsed"
+                      className="accordion-button collapsed FaqMain2"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapsefive"
